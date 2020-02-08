@@ -8,7 +8,7 @@ def heatmap(df):
     plt.xticks(rotation=90)
     plt.yticks(rotation = 0)
 
-def FeatureImportance(df, rf)
+def FeatureImportance(df, rf):
     features = list(df.columns)
     importances = rf.feature_importances_
     indices = np.argsort(importances)
