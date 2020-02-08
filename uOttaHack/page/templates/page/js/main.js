@@ -1,70 +1,29 @@
-
-(function ($) {
-    "use strict";
-
-
-    /*==================================================================
-    [ Focus Contact2 ]*/
-    $('.input100').each(function(){
-        $(this).on('blur', function(){
-            if($(this).val().trim() != "") {
-                $(this).addClass('has-val');
-            }
-            else {
-                $(this).removeClass('has-val');
-            }
-        })    
-    })
-  
-  
-    /*==================================================================
-    [ Validate ]*/
-    var name = $('.validate-input input[name="name"]');
-    var email = $('.validate-input input[name="email"]');
-    var message = $('.validate-input textarea[name="message"]');
-
-
-    $('.validate-form').on('submit',function(){
-        var check = true;
-
-        if($(name).val().trim() == ''){
-            showValidate(name);
-            check=false;
-        }
-
-
-        if($(email).val().trim().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{1,5}|[0-9]{1,3})(\]?)$/) == null) {
-            showValidate(email);
-            check=false;
-        }
-
-        if($(message).val().trim() == ''){
-            showValidate(message);
-            check=false;
-        }
-
-        return check;
-    });
-
-
-    $('.validate-form .input100').each(function(){
-        $(this).focus(function(){
-           hideValidate(this);
-       });
-    });
-
-    function showValidate(input) {
-        var thisAlert = $(input).parent();
-
-        $(thisAlert).addClass('alert-validate');
-    }
-
-    function hideValidate(input) {
-        var thisAlert = $(input).parent();
-
-        $(thisAlert).removeClass('alert-validate');
-    }
-    
-    
-
-})(jQuery);
+/*active button class onclick*/
+$('nav a').click(function(e) {
+  e.preventDefault();
+  $('nav a').removeClass('active');
+  $(this).addClass('active');
+  if(this.id === !'payment'){
+    $('.payment').addClass('noshow');
+  }
+  else if(this.id === 'payment') {
+    $('.payment').removeClass('noshow');
+    $('.rightbox').children().not('.payment').addClass('noshow');
+  }
+  else if (this.id === 'profile') {
+    $('.profile').removeClass('noshow');
+     $('.rightbox').children().not('.profile').addClass('noshow');
+  }
+  else if(this.id === 'subscription') {
+    $('.subscription').removeClass('noshow');
+    $('.rightbox').children().not('.subscription').addClass('noshow');
+  }
+    else if(this.id === 'privacy') {
+    $('.privacy').removeClass('noshow');
+    $('.rightbox').children().not('.privacy').addClass('noshow');
+  }
+  else if(this.id === 'settings') {
+    $('.settings').removeClass('noshow');
+    $('.rightbox').children().not('.settings').addClass('noshow');
+  }
+});
