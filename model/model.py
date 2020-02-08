@@ -17,7 +17,7 @@ def SVM():
     train_data_df = pd.read_csv('../data/processed/cleaned_data.csv')
     target = train_data_df['Dalc']
     train_data_df.drop(['Dalc'],axis=1,inplace=True)
-    X_train, X_test, y_train, y_test = train_test_split(train_data_df, target, test_size=0.3,random_state=109)
+    X_train, X_test, y_train, y_test = train_test_split(train_data_df, target, test_size=0.3,random_state=42)
 
     #Train the model using the training sets
     clf.fit(X_train, y_train)
@@ -50,7 +50,7 @@ def RandomForest():
     train_data_df = pd.read_csv('../data/processed/cleaned_data.csv')
     target = train_data_df['Dalc']
     train_data_df.drop(['Dalc'], axis=1, inplace=True)
-    X_train, X_test, y_train, y_test = train_test_split(train_data_df, target, test_size=0.3, random_state=109)
+    X_train, X_test, y_train, y_test = train_test_split(train_data_df, target, test_size=0.3, random_state=42)
 
     rf.fit(X_train, y_train)
 
@@ -74,7 +74,7 @@ def KNN():
     target = train_data_df['Dalc']
     train_data_df.drop(['Dalc'], axis=1, inplace=True)
 
-    X_train, X_test, y_train, y_test = train_test_split(train_data_df, target, test_size=0.3, random_state=109)
+    X_train, X_test, y_train, y_test = train_test_split(train_data_df, target, test_size=0.3, random_state=42)
 
     knn_model.fit(X_train,y_train)
     y_pred = knn_model.predict(X_test)
