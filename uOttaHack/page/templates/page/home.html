@@ -1,7 +1,6 @@
 {% load static %}
 
 <link rel="stylesheet" type="text/css" href="{%static 'style.css'%}">
-<script src="{% static 'script.js'%}"></script>
 
 <div class="container">
   <div id="logo"><h1 class="logo">hulu</h1>
@@ -20,17 +19,17 @@
   </div>
   <div class="rightbox">
     <div class="profile">
-      <h1>Personal Info</h1>
+      <h1>Questionnaire</h1>
       <h2>Full Name</h2>
-      <p>Julie Park <button class="btn">update</button></p>
+      <p contenteditable="true">Julie Park</p>
       <h2>Birthday</h2>
       <p>July 21</p>
       <h2>Gender</h2>
       <p>Female</p>
       <h2>Email</h2>
-      <p>example@example.com <button class="btn">update</button></p>
+      <p>example@example.com</p>
       <h2>Password </h2>
-      <p>••••••• <button class="btn">Change</button></p>
+      <p>•••••••</p>
     </div>
 
     <div class="payment noshow">
@@ -90,7 +89,3 @@
 
   </div>
 </div>
-
-<footer>
-  <p>made by <a href="https://codepen.io/juliepark"> julie</a> ♡
-</footer>
