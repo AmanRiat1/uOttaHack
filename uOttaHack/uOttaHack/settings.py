@@ -20,7 +20,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/3.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'pf)w#csa5&md*w&civ$qv^t^dn$(ynv8p*odh#4(_2vzed9gt8'
+SECRET_KEY = '7_ej+)_rs_0yd-!+ff)4q)pn^^5qa^gdvetc&z^e#2x2@dje$m'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -31,11 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-<<<<<<< HEAD:pill_classification/settings.py
-    'polls.apps.PollsConfig',
-=======
-    'page.apps.PageConfig',
->>>>>>> be90c65aa669b2ef4f092689712bdc15fa379db7:uOttaHack/uOttaHack/settings.py
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
