@@ -10,7 +10,6 @@ def convert_to_binary(arg1, arg2, df_series, df):
 
 
 def clean_columns(df):
-    df['Dalc'] = df['Dalc'] + df['Walc']
     df.drop(['school', 'address', 'Mjob', 'Fjob', 'reason',
              'guardian', 'paid', 'nursery', 'schoolsup', 'higher',
              'activities', 'Walc'], inplace=True, axis=1)
@@ -22,7 +21,7 @@ def clean_columns(df):
     df = convert_to_binary('F', 'M', 'sex', df)
     df = convert_to_binary('LE3', 'GT3', 'famsize', df)
     df = convert_to_binary('T', 'A', 'Pstatus', df)
-    df.to_csv('../data/processed/cleaned_data.csv')
+    df.to_csv('../data/processed/cleaned_data.csv',index=False)
 
 
 # if __name__ == "main":
