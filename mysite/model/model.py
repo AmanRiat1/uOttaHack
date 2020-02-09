@@ -22,9 +22,8 @@ def SVM():
 
     #Predict the response for test dataset
     y_pred = clf.predict(X_test)
-
     print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
-    pickle.dump(clf, open("../trained_models/svm.p", "wb"))
+    pickle.dump(clf, open("../trained_models/svm.sav", "wb"))
 
 
 def RandomForest():
@@ -39,7 +38,7 @@ def RandomForest():
     y_pred = rf.predict(X_test)
 
     print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
-    pickle.dump(rf, open("../trained_models/rf.p", "wb"))
+    pickle.dump(rf, open("../trained_models/rf.sav", "wb"))
     visualize_data.FeatureImportance(train_data_df,rf)
 
 def KNN():
@@ -53,7 +52,7 @@ def KNN():
     knn_model.fit(X_train,y_train)
     y_pred = knn_model.predict(X_test)
     print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
-    pickle.dump(knn_model, open("../trained_models/knn.p", "wb"))
+    pickle.dump(knn_model, open("../trained_models/knn.sav", "wb"))
 
 SVM()
 RandomForest()
