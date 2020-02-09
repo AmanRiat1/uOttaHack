@@ -1,3 +1,13 @@
+{% extends 'home.html' %}
+
+{% block content %}
+<form>
+  {{form.as_p}}
+  <input type="submit" value='Save'/>
+</form>
+
+{% endblock %}
+
 {%load static %}
 <link rel = "stylesheet" type = "text/css" href="{%static 'style.css'%}">
 
@@ -106,6 +116,8 @@
 	  <button type="button"><a class="btn btn-primary" href="/test">Submit</a></button>
 
     </div>
+
+    <button></button>
 
   </div>
 </div>
