@@ -9,7 +9,7 @@ def _form_view(request, template_name='basic.html', form_class=ContactForm):
         form = form_class(request.POST)
         if form.is_valid():
             name = form.cleaned_data['name']
-            email = form.cleaned_data['email']
+            age = form.cleaned_data['age']
             print (name)
             html = "<html><body>It is now .</body></html>"
             return HttpResponse(html)
