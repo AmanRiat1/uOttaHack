@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .forms import NameForm
 # Create your views here.
 from django.http import HttpResponse
 
@@ -16,6 +16,7 @@ def about(request):
 def test(request):
     return render(request, 'page/test.html')
 
+<<<<<<< HEAD
 
 def question_create_view(request):
     form = QuestionForm(request.POST or None)
@@ -25,3 +26,12 @@ def question_create_view(request):
     context = {'form': form}
 
     return render(request, 'page/home.html', context)
+=======
+def name(request):
+    return render(request, 'page/name.html')
+
+def get_name(request):
+
+    form = NameForm()
+    return render(request, 'name.html', {'form': form})
+>>>>>>> 4751f810dcbaea1ab594834a78889f0f251ab8bd
