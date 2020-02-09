@@ -11,4 +11,4 @@ def about(request):
     return render(request, 'page/About.html')
     
 def test(request):
-    return render(request, 'test.html')
+    return render(request, 'page/test.html')
