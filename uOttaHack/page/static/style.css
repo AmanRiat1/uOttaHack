@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Nunito:400,900|Montserrat|Roboto");
+
 body {
   background: linear-gradient(to right, #3fb6a8, #7ed386);
 }
@@ -38,6 +39,7 @@ body {
   transition: all 0.5s ease-in-out;
   cursor: pointer;
 }
+
 .CTA h1 {
   color: #ffffff;
   margin-top: 10px;
@@ -47,6 +49,7 @@ body {
   background: #3fb6a8;
   transform: scale(1.1);
 }
+
 
 .leftbox {
   float: left;
@@ -67,6 +70,7 @@ nav a {
   display: block;
   transition: all 0.3s ease-in-out;
 }
+
 nav a:hover {
   color: #3fb6a8;
   transform: scale(1.2);
@@ -86,10 +90,13 @@ nav a:first-child {
   height: 100%;
 }
 
-.profile,
+
 .payment,
+
 .subscription,
+
 .privacy,
+
 .settings {
   transition: opacity 0.5s ease-in;
   position: absolute;
@@ -151,6 +158,7 @@ input {
   font-family: "Roboto", sans-serif;
   padding: 2px;
   margin: 0;
+  
 }
 
 .privacy h2 {
