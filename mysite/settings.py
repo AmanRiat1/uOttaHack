@@ -24,7 +24,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '7_ej+)_rs_0yd-!+ff)4q)pn^^5qa^gdvetc&z^e#2x2@dje$m'
 =======
 SECRET_KEY = 'y1y5zrrgc7w&=9%$$an*_m)$yfmo*t7=&$(a@xy54zvk^5=tau'
+<<<<<<< HEAD
 >>>>>>> 79c2bf3e9f1edcf9e91cb3100171765082b2c7c8:mysite/settings.py
+=======
+>>>>>>> c9ddfb1828508227db2cedffbe915366f7b66ea1:mysite/settings.py
+>>>>>>> 1f38fe73826e331bab3ead3d8d7ffbcaba85a3fe
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -38,7 +42,11 @@ INSTALLED_APPS = [
 <<<<<<< HEAD:uOttaHack/uOttaHack/settings.py
     'django.contrib.admin',
 =======
+<<<<<<< HEAD
 >>>>>>> 79c2bf3e9f1edcf9e91cb3100171765082b2c7c8:mysite/settings.py
+=======
+>>>>>>> c9ddfb1828508227db2cedffbe915366f7b66ea1:mysite/settings.py
+>>>>>>> 1f38fe73826e331bab3ead3d8d7ffbcaba85a3fe
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
