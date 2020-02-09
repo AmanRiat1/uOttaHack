@@ -6,6 +6,7 @@ import pickle
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 import visualize_data
+from joblib import dump, load
 
 def SVM():
     #Create a svm Classifier
@@ -24,8 +25,8 @@ def SVM():
     y_pred = clf.predict(X_test)
 
     print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
-    pickle.dump(clf, open("../trained_models/svm.p", "wb"))
-
+    dump(clf, "../trained_models/svm.joblib")
+    return clf
 
 def RandomForest():
     rf = RandomForestClassifier(n_estimators=300, max_depth=3)
@@ -39,8 +40,9 @@ def RandomForest():
     y_pred = rf.predict(X_test)
 
     print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
-    pickle.dump(rf, open("../trained_models/rf.p", "wb"))
-    visualize_data.FeatureImportance(train_data_df,rf)
+    dump(rf, "../trained_models/rf.joblib")
+    #visualize_data.FeatureImportance(train_data_df,rf)
+    return rf
 
 def KNN():
     knn_model = KNeighborsClassifier()
@@ -52,9 +54,10 @@ def KNN():
 
     knn_model.fit(X_train,y_train)
     y_pred = knn_model.predict(X_test)
+    print(X_test)
     print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
-    pickle.dump(knn_model, open("../trained_models/knn.p", "wb"))
+    dump(knn_model, "../trained_models/knn.joblib")
+    return knn_model
 
-SVM()
-RandomForest()
-KNN()
+def all_models():
+    return [SVM(),RandomForest(), KNN()]
