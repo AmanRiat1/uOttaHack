@@ -23,10 +23,10 @@ def SVM():
 
     #Predict the response for test dataset
     y_pred = clf.predict(X_test)
-
     print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
     dump(clf, "../trained_models/svm.joblib")
     return clf
+
 
 def RandomForest():
     rf = RandomForestClassifier(n_estimators=300, max_depth=3)
