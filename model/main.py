@@ -10,3 +10,6 @@ class Main:
     def predict(self, features):
         prediction_results = [x.predict(features) for x in self.models]
         return max(prediction_results)*100
+
+
+    y = predict([1,2,3,1,2,3,1,2,3,1,2,3,1,2,3,1,2])

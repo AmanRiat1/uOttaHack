@@ -40,7 +40,8 @@ def RandomForest():
 
     print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
     pickle.dump(rf, open("../trained_models/rf.p", "wb"))
-    visualize_data.FeatureImportance(train_data_df,rf)
+    #visualize_data.FeatureImportance(train_data_df,rf)
+    #visualize_data.tree_visualization(train_data_df,rf)
 
 def KNN():
     knn_model = KNeighborsClassifier()
