@@ -5,6 +5,7 @@ from sklearn import metrics
 import pickle
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
+import visualize_data
 
 def SVM():
     #Create a svm Classifier
@@ -39,6 +40,7 @@ def RandomForest():
 
     print("Accuracy:", metrics.accuracy_score(y_test, y_pred))
     pickle.dump(rf, open("../trained_models/rf.p", "wb"))
+    visualize_data.FeatureImportance(train_data_df,rf)
 
 def KNN():
     knn_model = KNeighborsClassifier()

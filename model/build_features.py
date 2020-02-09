@@ -12,7 +12,7 @@ def convert_to_binary(arg1, arg2, df_series, df):
 def clean_columns(df):
     df.drop(['school', 'address', 'Mjob', 'Fjob', 'reason',
              'guardian', 'paid', 'nursery', 'schoolsup', 'higher',
-             'activities', 'Walc'], inplace=True, axis=1)
+             'activities', 'Walc','G1','G2','G3'], inplace=True, axis=1)
     modify_columns = ['famsup', 'internet', 'romantic',]
 
     for x in modify_columns:

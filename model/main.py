@@ -9,4 +9,4 @@ class Main:
 
     def predict(self, features):
         prediction_results = [x.predict(features) for x in self.models]
-        return prediction_results
+        return max(prediction_results)*100
