@@ -1,12 +1,29 @@
-<!DOCTYPE html>
 <html>
+{%load static %}
+<link rel = "stylesheet" type = "text/css" href="{%static 'mysite/style.css'%}">
 <head>
   <meta charset="utf-8">
   <title>Simple is Better Than Complex</title>
 </head>
-<body>
 
-  <form method="post" novalidate>
+
+<div class="container">
+  <div id="logo"><h1 class="logo">Health</h1>
+    <div class="CTA">
+      </div>
+  </div>
+  <div class="leftbox">
+    <nav>
+      <a id="profile" class="active"><i class="fa fa-user"></i></a>
+      <a id="payment"><i class="fa fa-credit-card"></i></a>
+      <a id="subscription"><i class="fa fa-tv"></i></a>
+      <a id="privacy"><i class="fa fa-tasks"></i></a>
+      <a id="settings"><i class="fa fa-cog"></i></a>
+    </nav>
+  </div>
+  <div class="rightbox">
+    <div class="profile">
+        <form method="post" novalidate>
     {% csrf_token %}
 
     {% if form.non_field_errors %}
@@ -51,6 +68,8 @@
 
     <button type="submit">Submit</button>
   </form>
+  </div>
 
-</body>
+  </div>
+</div>
 </html>
