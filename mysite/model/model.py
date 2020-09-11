@@ -5,6 +5,8 @@ from sklearn import metrics
 import pickle
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
+import os
+dirname = os.path.dirname(__file__)
 #import visualize_data
 from joblib import dump, load
 
@@ -13,7 +15,8 @@ def SVM():
     clf = svm.SVC(kernel='linear') # Linear Kernel
 
     # Split dataset into training set and test set
-    train_data_df = pd.read_csv('C:/Users/Aman Riat/Documents/Projects/Pill_Classfication/pill_classification/mysite/model/cleaned_data.csv')
+    #train_data_df = pd.read_csv('C:/Users/Aman Riat/Documents/Projects/Pill_Classfication/pill_classification/mysite/model/cleaned_data.csv')
+    train_data_df = pd.read_csv(os.path.join(dirname,'cleaned_data.csv'))
     target = train_data_df['Dalc']
     train_data_df.drop(['Dalc'],axis=1,inplace=True)
     X_train, X_test, y_train, y_test = train_test_split(train_data_df, target, test_size=0.3,random_state=42)
@@ -30,7 +33,8 @@ def SVM():
 
 def RandomForest():
     rf = RandomForestClassifier(n_estimators=300, max_depth=3)
-    train_data_df = pd.read_csv('C:/Users/Aman Riat/Documents/Projects/Pill_Classfication/pill_classification/mysite/model/cleaned_data.csv')
+    #train_data_df = pd.read_csv('C:/Users/Aman Riat/Documents/Projects/Pill_Classfication/pill_classification/mysite/model/cleaned_data.csv')
+    train_data_df = pd.read_csv(os.path.join(dirname,'cleaned_data.csv'))
     target = train_data_df['Dalc']
     train_data_df.drop(['Dalc'], axis=1, inplace=True)
     X_train, X_test, y_train, y_test = train_test_split(train_data_df, target, test_size=0.3, random_state=42)
@@ -46,7 +50,8 @@ def RandomForest():
 
 def KNN():
     knn_model = KNeighborsClassifier()
-    train_data_df = pd.read_csv('C:/Users/Aman Riat/Documents/Projects/Pill_Classfication/pill_classification/mysite/model/cleaned_data.csv')
+    #train_data_df = pd.read_csv('C:/Users/Aman Riat/Documents/Projects/Pill_Classfication/pill_classification/mysite/model/cleaned_data.csv')
+    train_data_df = pd.read_csv(os.path.join(dirname,'cleaned_data.csv'))
     target = train_data_df['Dalc']
     train_data_df.drop(['Dalc'], axis=1, inplace=True)
 
