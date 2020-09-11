@@ -40,7 +40,9 @@ def _form_view(request, template_name='basic.html', form_class=ContactForm):
                                    study_time,failures,family_support,internet,relationship,family_relationship_quality,
                                    time_after_school,going_out,health,absences])
             html = f"<html><body>Your risk of alcohol addiction is {score} .</body></html>"
-            return HttpResponse(html)
+            score.tolist()
+
+            return render(request, 'output.html', {'score': score[0]})
     else:
         form = form_class()
     return render(request, template_name, {'form': form})
