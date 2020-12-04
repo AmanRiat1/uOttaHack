@@ -1,2 +1,7 @@
 Django==1.11.29
 django-widget-tweaks==1.4.1
+pandas
+joblib
+numpy
+scipy
+sklearn
